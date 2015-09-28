@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"LBScrollLabel";
     NSArray *scrollLBArray = @[[NSNumber numberWithInteger:LBScrollLabelDirection_Top],
                                [NSNumber numberWithInteger:LBScrollLabelDirection_Bottom],
                                [NSNumber numberWithInteger:LBScrollLabelDirection_Left],
@@ -27,7 +28,7 @@
     NSArray *scrollLBText = @[@"Scroll label, from bottom to top!",
                               @"Scroll label, from top to bottom!",
                               @"Hello, I am a scroll label, from right to left! I can become long longer longest      ",
-                              @"Hello, I am a scroll label, from left to right! I can be long longer longest      ",
+                              @"Hello, I am a scroll label, from left to right! I can become long longer longest      ",
                               ];
     
     [scrollLBArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
