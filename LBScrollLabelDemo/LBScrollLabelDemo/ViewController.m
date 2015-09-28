@@ -33,11 +33,11 @@
     [scrollLBArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         //
         NSNumber *direction = (NSNumber *)obj;
-        LBScrollLabel *topLB = [[LBScrollLabel alloc] initWithFrame:CGRectMake(20, 100 + 50 *idx, CGRectGetWidth(self.view.frame) - 40, 30)];
-        topLB.backgroundColor = [UIColor colorWithRed:(arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1];
-        topLB.text = [scrollLBText objectAtIndex:direction.integerValue];
-        [topLB beginScrollWithDirection:direction.integerValue];
-        [self.view addSubview:topLB];
+        LBScrollLabel *tempLB = [[LBScrollLabel alloc] initWithFrame:CGRectMake(20, 100 + 50 *idx, CGRectGetWidth(self.view.frame) - 40, 30)];
+        tempLB.backgroundColor = [UIColor colorWithRed:(arc4random()%255)/255.0 green:(arc4random()%255)/255.0 blue:(arc4random()%255)/255.0 alpha:1];
+        tempLB.text = [scrollLBText objectAtIndex:direction.integerValue];
+        [tempLB beginScrollWithDirection:direction.integerValue];
+        [self.view addSubview:tempLB];
     }];
 }
 
